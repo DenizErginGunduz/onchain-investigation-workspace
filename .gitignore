@@ -1,0 +1,8 @@
+.runtime/
+.venv/
+__pycache__/
+*.pyc
+.env
+.sites-runtime/
+node_modules/
+
