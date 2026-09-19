@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "subject": {
+    "chain": "eip155:137",
+    "address": "demo:wallet-birch"
+  },
+  "source": {
+    "provider": "Built-in synthetic fixtures",
+    "retrieved_at": "2026-09-12T09:00:00Z",
+    "reference": "fixtures/ordinary.json - authored fictional negative-control scenario",
+    "export_allowed": true
+  },
+  "coverage": {
+    "state": "bounded",
+    "limitations": [
+      "All entities, transactions and amounts are fictional.",
+      "An ordinary explanation is plausible, but this example does not establish real-world intent.",
+      "No sanctions dataset or full historical balances were consulted."
+    ]
+  },
+  "events": [
+    {
+      "chain": "eip155:137",
+      "tx": "demo:birch-transaction-1",
+      "locator": "log:1",
+      "timestamp": "2026-09-10T10:00:00Z",
+      "from": "Funding wallet",
+      "to": "Birch wallet",
+      "amount_raw": "4000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "transfer",
+      "status": "synthetic",
+      "label": "Planned account funding"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:birch-transaction-2",
+      "locator": "log:2",
+      "timestamp": "2026-09-10T11:00:00Z",
+      "from": "Birch wallet",
+      "to": "Market position",
+      "amount_raw": "2000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "market_activity",
+      "status": "synthetic",
+      "label": "Position entry"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:birch-transaction-3",
+      "locator": "log:3",
+      "timestamp": "2026-09-10T12:00:00Z",
+      "from": "Birch wallet",
+      "to": "Personal reserve",
+      "amount_raw": "1000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "transfer",
+      "status": "synthetic",
+      "label": "Reserve allocation"
+    }
+  ]
+}

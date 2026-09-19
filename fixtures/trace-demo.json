@@ -1,0 +1,273 @@
+{
+  "bundle_version": "1.2",
+  "title": "Authored trace demonstration - fictional evidence only",
+  "snapshot": {
+    "schema_version": "1.0",
+    "synthetic": true,
+    "subject": {
+      "chain": "eip155:137",
+      "address": "0x1111111111111111111111111111111111111111"
+    },
+    "source": {
+      "provider": "Authored test fixture",
+      "retrieved_at": "2026-09-14T00:00:00Z",
+      "reference": "authored fixture",
+      "export_allowed": true
+    },
+    "coverage": {
+      "state": "bounded",
+      "limitations": [
+        "Fictional test data"
+      ]
+    },
+    "events": [
+      {
+        "chain": "eip155:137",
+        "tx": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "locator": "provider-row:1",
+        "timestamp": "2026-09-14T00:00:00Z",
+        "from": "0x1111111111111111111111111111111111111111",
+        "to": "Activity",
+        "label": "Authored observation",
+        "kind": "market_activity",
+        "status": "provider_reported",
+        "asset": {
+          "id": "reported:usd",
+          "symbol": "reported USD",
+          "decimals": 6
+        },
+        "amount_raw": "100"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "tx": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "receipt": {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getTransactionReceipt",
+          "params": [
+            "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": {\"transactionHash\": \"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"blockHash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"blockNumber\": \"0x64\", \"transactionIndex\": \"0x0\", \"status\": \"0x1\", \"logs\": [{\"transactionHash\": \"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"blockHash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"blockNumber\": \"0x64\", \"transactionIndex\": \"0x0\", \"logIndex\": \"0x7\", \"removed\": false, \"address\": \"0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb\", \"topics\": [\"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\", \"0x0000000000000000000000001111111111111111111111111111111111111111\", \"0x0000000000000000000000002222222222222222222222222222222222222222\"], \"data\": \"0x000000000000000000000000000000000000000c9f2c9cd04674edea40000007\"}]}}",
+        "sha256": "761aa5b34c896d0851cc53a9aa8d19c2fc66b0e57c8c9f9a6f39fa002a41dd87"
+      },
+      "transaction": {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getTransactionByHash",
+          "params": [
+            "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": {\"hash\": \"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"blockHash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"blockNumber\": \"0x64\", \"transactionIndex\": \"0x0\", \"to\": \"0x2222222222222222222222222222222222222222\"}}",
+        "sha256": "0a636f0f1e9e4009405debced28d72980a1281f06e162d622080ba2011ad3c7b"
+      },
+      "block": {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getBlockByNumber",
+          "params": [
+            "0x64",
+            false
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": {\"number\": \"0x64\", \"hash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"timestamp\": \"0x65000000\", \"transactions\": [\"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"]}}",
+        "sha256": "bc231713035bb3f59a1c76af2c14bbf54bb1e609340901cd17d7ebddb18f7736"
+      },
+      "head": {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_blockNumber",
+          "params": []
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": \"0x80\"}",
+        "sha256": "0f94aef65c2de062474f0448297a65ebfbd37f573281f1bcf6933e2e5aa75a4d"
+      },
+      "chain": {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_chainId",
+          "params": []
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": \"0x89\"}",
+        "sha256": "4499e58e094aa5120f481cd8b75a914221e488263fc44c14ce9a55afe09ff98e"
+      }
+    }
+  ],
+  "trace": {
+    "trace_version": "1.0",
+    "scope": {
+      "chain": "eip155:137",
+      "subject": "0x1111111111111111111111111111111111111111",
+      "contract": "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+      "from_block": 100,
+      "to_block": 110,
+      "recipient": "0x2222222222222222222222222222222222222222"
+    },
+    "chain": {
+      "url": "https://example.invalid/rpc",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_chainId",
+        "params": []
+      },
+      "retrieved_at": "2026-09-14T00:00:00Z",
+      "http_status": 200,
+      "tls_verification": true,
+      "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": \"0x89\"}",
+      "sha256": "4499e58e094aa5120f481cd8b75a914221e488263fc44c14ce9a55afe09ff98e"
+    },
+    "head": {
+      "url": "https://example.invalid/rpc",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_blockNumber",
+        "params": []
+      },
+      "retrieved_at": "2026-09-14T00:00:00Z",
+      "http_status": 200,
+      "tls_verification": true,
+      "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": \"0x80\"}",
+      "sha256": "0f94aef65c2de062474f0448297a65ebfbd37f573281f1bcf6933e2e5aa75a4d"
+    },
+    "start_block": {
+      "url": "https://example.invalid/rpc",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "0x64",
+          false
+        ]
+      },
+      "retrieved_at": "2026-09-14T00:00:00Z",
+      "http_status": 200,
+      "tls_verification": true,
+      "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": {\"number\": \"0x64\", \"hash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"timestamp\": \"0x65000000\", \"transactions\": [\"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"]}}",
+      "sha256": "bc231713035bb3f59a1c76af2c14bbf54bb1e609340901cd17d7ebddb18f7736"
+    },
+    "end_block": {
+      "url": "https://example.invalid/rpc",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "0x6e",
+          false
+        ]
+      },
+      "retrieved_at": "2026-09-14T00:00:00Z",
+      "http_status": 200,
+      "tls_verification": true,
+      "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": {\"number\": \"0x6e\", \"hash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"timestamp\": \"0x65000064\", \"transactions\": [\"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"]}}",
+      "sha256": "c6e93596ebb9042299f87efaa948bb7e774d8be70268d5a4a5dd2999256ebe67"
+    },
+    "queries": [
+      {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getLogs",
+          "params": [
+            {
+              "address": "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+              "fromBlock": "0x64",
+              "toBlock": "0x6e",
+              "topics": [
+                "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                null,
+                "0x0000000000000000000000001111111111111111111111111111111111111111"
+              ]
+            }
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": []}",
+        "sha256": "126186dcb13f79dd7afe64f7f1c926e53a5deea6aa78e54e7b07e4abd2780bfb"
+      },
+      {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getLogs",
+          "params": [
+            {
+              "address": "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+              "fromBlock": "0x64",
+              "toBlock": "0x6e",
+              "topics": [
+                "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                "0x0000000000000000000000001111111111111111111111111111111111111111"
+              ]
+            }
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": [{\"transactionHash\": \"0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"blockHash\": \"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\", \"blockNumber\": \"0x64\", \"transactionIndex\": \"0x0\", \"logIndex\": \"0x7\", \"removed\": false, \"address\": \"0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb\", \"topics\": [\"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\", \"0x0000000000000000000000001111111111111111111111111111111111111111\", \"0x0000000000000000000000002222222222222222222222222222222222222222\"], \"data\": \"0x000000000000000000000000000000000000000c9f2c9cd04674edea40000007\"}]}",
+        "sha256": "32a5ed15ab354de5d24f340c244abe4d72f217b45903b4651e3fee39749afcb1"
+      },
+      {
+        "url": "https://example.invalid/rpc",
+        "request": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "eth_getLogs",
+          "params": [
+            {
+              "address": "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+              "fromBlock": "0x64",
+              "toBlock": "0x6e",
+              "topics": [
+                "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+                "0x0000000000000000000000002222222222222222222222222222222222222222"
+              ]
+            }
+          ]
+        },
+        "retrieved_at": "2026-09-14T00:00:00Z",
+        "http_status": 200,
+        "tls_verification": true,
+        "body_utf8": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"result\": []}",
+        "sha256": "126186dcb13f79dd7afe64f7f1c926e53a5deea6aa78e54e7b07e4abd2780bfb"
+      }
+    ]
+  }
+}

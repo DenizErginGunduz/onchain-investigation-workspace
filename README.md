@@ -41,12 +41,6 @@ The large raw integer is deliberate precision-test data, not observed economic v
 
 ![Synthetic bounded-transfer demonstration](assets/evidence-demo.png)
 
-## A real validation exercise
-
-A bounded validation exercise collected **50 provider observations** for one public wallet and corroborated **three selected transactions**, yielding six subject-related collateral transfer logs. The review distinguished seller payment, exchange fee and incoming outcome tokens. These are three similar transactions, not three independent cases or a representative benchmark.
-
-Read the [sanitized case brief](docs/CASE_STUDY.md) for the arithmetic, method and unresolved questions. Its reported results are not independently replayable from this package: raw real-world records and wallet identifiers are excluded. The synthetic bundle makes the software workflow reproducible.
-
 ## Architecture
 
 ```mermaid

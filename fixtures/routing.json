@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "subject": {
+    "chain": "eip155:137",
+    "address": "demo:wallet-alder"
+  },
+  "source": {
+    "provider": "Built-in synthetic fixtures",
+    "retrieved_at": "2026-09-12T09:00:00Z",
+    "reference": "fixtures/routing.json - authored fictional data, not an observed wallet",
+    "export_allowed": true
+  },
+  "coverage": {
+    "state": "bounded",
+    "limitations": [
+      "All entities, transactions and values in this case are fictional.",
+      "This example covers six authored observations; it is not a complete wallet history.",
+      "Bridge destination and exchange customer identity are not established.",
+      "Amounts use exact asset units. No USD conversion or profit attribution has been calculated."
+    ]
+  },
+  "events": [
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-1",
+      "locator": "log:1",
+      "timestamp": "2026-09-10T10:00:00Z",
+      "from": "Funding wallet",
+      "to": "Alder wallet",
+      "amount_raw": "12000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "transfer",
+      "status": "synthetic",
+      "label": "Initial funding"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-2",
+      "locator": "log:2",
+      "timestamp": "2026-09-10T11:00:00Z",
+      "from": "Alder wallet",
+      "to": "Market position",
+      "amount_raw": "8000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "market_activity",
+      "status": "synthetic",
+      "label": "Position entry"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-3",
+      "locator": "log:3",
+      "timestamp": "2026-09-10T12:00:00Z",
+      "from": "Market position",
+      "to": "Alder wallet",
+      "amount_raw": "11000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "market_activity",
+      "status": "synthetic",
+      "label": "Position redemption"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-4",
+      "locator": "log:4",
+      "timestamp": "2026-09-10T13:00:00Z",
+      "from": "Alder wallet",
+      "to": "Collateral conversion",
+      "amount_raw": "6000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "transfer",
+      "status": "synthetic",
+      "label": "Collateral exit"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-5",
+      "locator": "log:5",
+      "timestamp": "2026-09-10T14:00:00Z",
+      "from": "Collateral conversion",
+      "to": "Bridge route",
+      "amount_raw": "5900000000",
+      "asset": {
+        "id": "eip155:137/demo:USDC",
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "kind": "bridge",
+      "status": "synthetic",
+      "label": "Bridge interaction",
+      "destination_chain": "eip155:1"
+    },
+    {
+      "chain": "eip155:137",
+      "tx": "demo:transaction-6",
+      "locator": "log:6",
+      "timestamp": "2026-09-10T15:00:00Z",
+      "from": "Alder wallet",
+      "to": "Exchange service",
+      "amount_raw": "3000000000",
+      "asset": {
+        "id": "eip155:137/demo:pUSD",
+        "symbol": "pUSD",
+        "decimals": 6
+      },
+      "kind": "service_boundary",
+      "status": "synthetic",
+      "label": "Transfer to a service"
+    }
+  ]
+}
